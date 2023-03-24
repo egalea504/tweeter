@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -63,13 +64,24 @@
             <output name="counter" id="counter" for="tweet-text">140</output>
           </div>
         </form>
-      </section>
-
-      <h1>Hello!</h1>
-      <p1>Here is a tweet. Maybe?</p1>
-      <br>
-      <br>
-      <p2>Hodor. Hodor hodor, hodor. Hodor hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor; hodor hodor hodor. Hodor. Hodor hodor; hodor hodor - hodor, hodor, hodor hodor. Hodor, hodor. Hodor. Hodor, hodor hodor hodor; hodor hodor; hodor hodor hodor! Hodor hodor HODOR! Hodor hodor... Hodor hodor hodor...</p2>    
+        <section class="tweet-container">
+          <article>
+            <header class="user">
+              <div id="name">Newton</div>
+              <div id="username">@SirIsaac</div>
+            </header>
+            <p id="full-tweet">If I have seen further it is by standing on the shoulders of giants.</p>
+            <footer class="publish-info">
+              <div>10 days ago</div>
+              <div class="icons">
+                <i class="fa-solid fa-flag" id="flag"></i>
+                <i class="fa-solid fa-retweet" id="rt"></i>
+                <i class="fa-solid fa-heart" id="heart"></i>
+              </div>
+            </footer>
+          </article>
+        </section>
+      </section>  
     </main>
   </body>
 </html>

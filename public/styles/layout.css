@@ -32,5 +32,6 @@ body {
   justify-content: center;
   background-color: #f4f1ec;
   margin: auto;
-  font-weight:600;
+  font-weight:300;
+  font-size: larger;
  }
