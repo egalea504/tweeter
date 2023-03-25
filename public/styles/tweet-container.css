@@ -52,3 +52,13 @@
 #heart:hover {
   color: rgb(198, 192, 81);
 }
+
+.avatar {
+  height: 1.5em;
+  width: 1.5em;
+}
+
+span {
+  display: flex;
+  align-items: center;
+}
