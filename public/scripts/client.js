@@ -80,8 +80,11 @@ $("#form-tweet").submit(function(event) {
       alert(`Message too long! Please don't exceed 140 characters.`)
     } else {
     let data = $( this ).serialize()
-    $.ajax({url: "/tweets/", method: 'POST', data: data})
-    }
+    //once post has been completed - reload page
+    $.ajax({url: "/tweets/", method: 'POST', data: data}).done(function(){
+      window.location.reload();
+    });
+  }
 });
 
 // load tweets which have been posted
