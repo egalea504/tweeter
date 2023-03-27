@@ -69,9 +69,20 @@ return finalHTML;
 
 $("#form-tweet").submit(function(event) {
     event.preventDefault();
+
+    const $textarea = $(this).find('textarea');
+    const textLength = $textarea.val().trim().length;
+
+    if (textLength === 0) {
+      alert(`Are you trying to submit something? The field looks empty. Try again!`)
+      
+    } else if (textLength > 140) {
+      alert(`Message too long! Please don't exceed 140 characters.`)
+    } else {
     let data = $( this ).serialize()
     $.ajax({url: "/tweets/", method: 'POST', data: data})
-})
+    }
+});
 
 // load tweets which have been posted
 const loadTweets = $(function() {
