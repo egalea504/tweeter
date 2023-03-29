@@ -67,6 +67,10 @@ const createTweetElement = function(tweet) {
 return finalHTML;
 };
 
+//initial state - error messages hidden
+$("#error-no-input").hide();
+$("#error-chars").hide();
+
 $("#form-tweet").submit(function(event) {
     event.preventDefault();
 
@@ -74,10 +78,10 @@ $("#form-tweet").submit(function(event) {
     const textLength = $textarea.val().trim().length;
 
     if (textLength === 0) {
-      alert(`Are you trying to submit something? The field looks empty. Try again!`)
+      $( "#error-no-input" ).slideDown( "slow" );
       
     } else if (textLength > 140) {
-      alert(`Message too long! Please don't exceed 140 characters.`)
+      $( "#error-chars" ).slideDown( "slow" );
     } else {
     let data = $( this ).serialize()
     //once post has been completed - reload page

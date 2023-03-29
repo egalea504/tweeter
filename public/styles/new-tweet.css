@@ -37,5 +37,34 @@
   border: 0;
 }
 
+#error-no-input {
+  border: solid;
+  border-width: 5px;
+  border-color: red;
+  padding: 5px;
+  margin:20px;
+  color: red;
+  font-weight:600;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+
+#error-chars {
+  border: solid;
+  border-width: 5px;
+  border-color: red;
+  padding: 5px;
+  margin:20px;
+  color: red;
+  font-weight:600;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+
+
+
+
 
 
