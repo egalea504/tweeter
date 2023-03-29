@@ -27,7 +27,7 @@
 //     },
 //     "created_at": 1461113959088
 //   }
-// ]
+//
 
 $(document).ready(function() {
 
@@ -43,6 +43,8 @@ const renderTweets = function(tweets) {
 
 const createTweetElement = function(tweet) { 
   let now = timeago.format(tweet.created_at);
+  //this changes any input in the form into text , fixes XSS issue
+  let safeText = $('<div>').text(tweet.content.text).html();
   //timestamp wasn't giving a valid date
   // let createdAt = new Date(tweet.created_at);
   // let timePassed = now - createdAt;
@@ -53,7 +55,7 @@ const createTweetElement = function(tweet) {
   <span> <img class="avatar" src="${tweet.user.avatar}"> ${tweet.user.name} </span>
   <div id="username">${tweet.user.handle}</div>
 </header>
-<p id="full-tweet">${tweet.content.text}</p>
+<p id="full-tweet">${safeText}</p>
 <footer class="publish-info">
   <div>${now}</div>
   <div class="icons">
