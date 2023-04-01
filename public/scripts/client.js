@@ -35,7 +35,7 @@ const renderTweets = function(tweets) {
   // loops through tweets
   for (let tweet of tweets) {
       const $tweet = createTweetElement(tweet);
-      $('#tweet-container').append($tweet);
+      $('#tweet-container').prepend($tweet);
   }
   // calls createTweetElement for each tweet
   // takes return value and appends it to the tweets container
@@ -52,7 +52,7 @@ const createTweetElement = function(tweet) {
   
  let finalHTML = `<article>
 <header class="user">
-  <span> <img class="avatar" src="${tweet.user.avatar}"> ${tweet.user.name} </span>
+  <span> <img class="avatar" src="/images/descartes.png"> &nbsp ${tweet.user.name} </span>
   <div id="username">${tweet.user.handle}</div>
 </header>
 <p id="full-tweet">${safeText}</p>
@@ -103,4 +103,15 @@ const loadTweets = $(function() {
     renderTweets(data);
   })
 })
+});
+
+$(document).ready(function() {
+  $("#arrow-down").click(function() {
+    $("html").animate(
+      {
+        scrollTop: $(".container").offset().top
+      },
+      800 //speed
+    );
+  });
 });

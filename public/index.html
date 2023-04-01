@@ -35,10 +35,10 @@
       <span class="logo">tweeter</span>
       <div class="right-corner";>
       <div class="newtweet">
-        <span><span class="write">Write </span> a new tweet</span>
-        <span class="arrow-down">
+        <div><b>Write</b> a new tweet</div>
+        <div id="arrow-down">
         <i class="fa-solid fa-angles-down"></i>
-      </span>
+        </div>
       </div>
     </div>
     </nav>
@@ -52,6 +52,8 @@
           <h2 class="user-name"><span class="first-user-name">Eliza</span> Galea</h2>
       </div>
   </header>
+
+
 
     <!-- Page-specific (main) content here -->
     <main class="container">
@@ -70,7 +72,7 @@
         </div>
         </div>
 
-        <h2>Compose Tweet</h2>
+        <h2 class="compose-tweet">Compose Tweet</h2>
         <form id="form-tweet" method="POST" action="/tweets/">
           <div class="tweet-text">
           <label for="tweet-text" id="tweet-text-label">What are you humming about?</label>
@@ -82,7 +84,7 @@
           </div>
         </form>
         <section id="tweet-container">
-          <article>
+          <article id="full-sub-tweet">
             <header class="user">
               <span> <img class="avatar" src="/images/profile-hex.png"> Newton </span>
               <div id="username">@SirIsaac</div>

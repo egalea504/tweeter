@@ -24,13 +24,13 @@ nav {
   align-items: flex-end;
 }
 
-.arrow-down {
+#arrow-down {
   display: flex;
   justify-content: center;
   align-items: center;
   color: red;
 }
 
-.write {
-  font-weight:600;
+#arrow-down:hover {
+  color: #FFFFFF;
 }

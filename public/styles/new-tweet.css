@@ -1,3 +1,7 @@
+.compose-tweet {
+  padding-top: 120px;
+}
+
 .tweet-text {
   border-bottom: solid;
   border-bottom-width: 5px;
@@ -12,8 +16,10 @@
 }
 
 #tweet-text {
-  border: 0;
-  background-color: #f4f1ec;
+  border-radius: 15px;
+  border-color: #e5e4e4e8;
+  resize:none;
+  background-color: #e5e4e4e8;
 }
 
 .tweet {
@@ -32,9 +38,10 @@
 
 #tweet-button {
   font-family: 'Bungee', sans-serif;
-  background-color: #4056A1;
+  background-color: #545149;
   color: #FFFFFF;
-  border: 0;
+  border-radius: 15px;
+  border-color:#545149;
 }
 
 #error-no-input {

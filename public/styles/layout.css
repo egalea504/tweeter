@@ -16,7 +16,9 @@ html {
 
 body {
   color: #545149;
-  background-color: #f4f1ec;
+  background-color: #d8d8d8b0;
+  background-image: url("https://www.transparenttextures.com/patterns/beige-paper.png");
+  opacity:initial;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
   width: 100%;
@@ -30,7 +32,8 @@ body {
   width: 90%;
   align-items: center;
   justify-content: center;
-  background-color: #f4f1ec;
+  /* background-color: #d8d8d8b0;
+  opacity:initial; */
   margin: auto;
   font-weight:300;
   font-size: larger;
