@@ -1,56 +1,25 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
-// const data = [
-//   {
-//     "user": {
-//       "name": "Newton",
-//       "avatars": "https://i.imgur.com/73hZDYK.png"
-//       ,
-//       "handle": "@SirIsaac"
-//     },
-//     "content": {
-//       "text": "If I have seen further it is by standing on the shoulders of giants"
-//     },
-//     "created_at": 1461116232227
-//   },
-//   {
-//     "user": {
-//       "name": "Descartes",
-//       "avatars": "https://i.imgur.com/nlhLi3I.png",
-//       "handle": "@rd" },
-//     "content": {
-//       "text": "Je pense , donc je suis"
-//     },
-//     "created_at": 1461113959088
-//   }
-//
+// Client-side JS logic goes here
 
 $(document).ready(function() {
 
-const renderTweets = function(tweets) {
+  const renderTweets = function(tweets) {
   // loops through tweets
-  for (let tweet of tweets) {
+    for (let tweet of tweets) {
       const $tweet = createTweetElement(tweet);
       $('#tweet-container').prepend($tweet);
-  }
+    }
   // calls createTweetElement for each tweet
   // takes return value and appends it to the tweets container
-}
-
-const createTweetElement = function(tweet) { 
-  let now = timeago.format(tweet.created_at);
-  //this changes any input in the form into text , fixes XSS issue
-  let safeText = $('<div>').text(tweet.content.text).html();
-  //timestamp wasn't giving a valid date
-  // let createdAt = new Date(tweet.created_at);
-  // let timePassed = now - createdAt;
-  // const days = Math.floor(timePassed / (1000 * 60 * 60 * 24));
+  };
   
- let finalHTML = `<article>
+  const createTweetElement = function(tweet) {
+    
+    let now = timeago.format(tweet.created_at);
+    //this changes any input in the form into text , fixes XSS issue
+  
+    let safeText = $('<div>').text(tweet.content.text).html();
+  
+    let finalHTML = `<article>
 <header class="user">
   <span> <img class="avatar" src="/images/descartes.png"> &nbsp ${tweet.user.name} </span>
   <div id="username">${tweet.user.handle}</div>
@@ -64,53 +33,56 @@ const createTweetElement = function(tweet) {
     <i class="fa-solid fa-heart" id="heart"></i>
   </div>
 </footer>
-</article>`
+</article>`;
 
-return finalHTML;
-};
+    return finalHTML;
+  };
 
-//initial state - error messages hidden
-$("#error-no-input").hide();
-$("#error-chars").hide();
+  // //initial state - error messages hidden
+  $("#error-no-input").hide();
+  $("#error-chars").hide();
 
-$("#form-tweet").submit(function(event) {
+  $("#form-tweet").submit(function(event) {
     event.preventDefault();
+
+      //initial state - error messages hidden
+      $("#error-no-input").hide();
+      $("#error-chars").hide();
 
     const $textarea = $(this).find('textarea');
     const textLength = $textarea.val().trim().length;
 
     if (textLength === 0) {
-      $( "#error-no-input" ).slideDown( "slow" );
-      
+      $("#error-no-input").slideDown("slow");
     } else if (textLength > 140) {
-      $( "#error-chars" ).slideDown( "slow" );
+      $("#error-chars").slideDown("slow");
     } else {
-    let data = $( this ).serialize()
-    //once post has been completed - reload page
-    $.ajax({url: "/tweets/", method: 'POST', data: data}).done(function(){
-      window.location.reload();
-    });
-  }
-});
+      let data = $(this).serialize();
+      //once post has been completed - reload page
+      $.ajax({url: "/tweets/", method: 'POST', data: data}).done(function() {
+        window.location.reload(loadTweets);
+      });
+    }
+  });
 
-// load tweets which have been posted
-const loadTweets = $(function() {
-  $.ajax({url: "/tweets/", method: 'GET', datatype: 'json'})
-  .then(function(data) {
-    console.log('Success: ', data);
-    //empty so the page can load all new tweets
-    $('#tweet-container').empty();
-    renderTweets(data);
-  })
-})
+  // load tweets which have been posted
+  const loadTweets = $(function() {
+    $.ajax({url: "/tweets/", method: 'GET', datatype: 'json'})
+      .then(function(data) {
+        console.log('Success: ', data);
+        //empty so the page can load all new tweets
+        $('#tweet-container').empty();
+        renderTweets(data);
+      });
+  });
 
-$("#arrow-down").click(function() {
-  $("html").animate(
-    {
-      scrollTop: $(".container").offset().top
-    },
-    800 //speed
-  );
-});
+  $("#arrow-down").click(function() {
+    $("html").animate(
+      {
+        scrollTop: $(".container").offset().top
+      },
+      800 //speed
+    );
+  });
 
 });

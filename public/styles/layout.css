@@ -16,7 +16,7 @@ html {
 
 body {
   color: #545149;
-  background-color: #d8d8d8b0;
+  background-color: #6d88725e;
   background-image: url("https://www.transparenttextures.com/patterns/beige-paper.png");
   opacity:initial;
   font-size: 24px;
@@ -42,20 +42,25 @@ body {
  @media only screen and (min-width: 1024px) {
   body {
     display: flex;
-
+    background-color: #d8d8d8b0;
+    background-image: url("https://www.transparenttextures.com/patterns/beige-paper.png");
   }
 
   header {
     flex: 50%;
-    margin-top: 51px;
+    margin-top: 120px;
   }
 
   main {
+    padding-top:120px;
     margin:50px;
     flex-direction: row;
   }
 
-  .user {
-    margin-top:0;
+  .user-image {
+    padding:70px;
+    border:60px;
+    background-color: #6d88725e;
+    background-image: url("https://www.transparenttextures.com/patterns/beige-paper.png");
   }
   }

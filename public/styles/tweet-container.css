@@ -66,3 +66,9 @@ span {
   display: flex;
   align-items: center;
 }
+
+@media only screen and (min-width: 1024px) {
+  .user {
+    margin-top:0;
+  }
+}
