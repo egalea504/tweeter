@@ -32,9 +32,30 @@ body {
   width: 90%;
   align-items: center;
   justify-content: center;
-  /* background-color: #d8d8d8b0;
-  opacity:initial; */
   margin: auto;
   font-weight:300;
   font-size: larger;
  }
+
+
+ /*change body layout for desktop*/
+ @media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+
+  }
+
+  header {
+    flex: 50%;
+    margin-top: 51px;
+  }
+
+  main {
+    margin:50px;
+    flex-direction: row;
+  }
+
+  .user {
+    margin-top:0;
+  }
+  }

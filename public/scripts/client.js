@@ -103,15 +103,14 @@ const loadTweets = $(function() {
     renderTweets(data);
   })
 })
+
+$("#arrow-down").click(function() {
+  $("html").animate(
+    {
+      scrollTop: $(".container").offset().top
+    },
+    800 //speed
+  );
 });
 
-$(document).ready(function() {
-  $("#arrow-down").click(function() {
-    $("html").animate(
-      {
-        scrollTop: $(".container").offset().top
-      },
-      800 //speed
-    );
-  });
 });

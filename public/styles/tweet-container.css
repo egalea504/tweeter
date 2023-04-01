@@ -37,6 +37,10 @@ article:hover {
   padding:20px;
 }
 
+.icons {
+  color:#4056A1;
+}
+
 #username {
   font-weight:600;
 }
@@ -50,7 +54,7 @@ article:hover {
 }
 
 #heart:hover {
-  color: rgb(198, 192, 81);
+  color: red;
 }
 
 .avatar {

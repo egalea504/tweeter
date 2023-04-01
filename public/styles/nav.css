@@ -1,7 +1,6 @@
 nav {
   height: 120px;
   width: 100%;
-  background-color: #4056A1;
   color: #FFFFFF;
   padding: 1.5em;
   position: fixed;
@@ -33,4 +32,11 @@ nav {
 
 #arrow-down:hover {
   color: #FFFFFF;
+}
+
+/*change nav bar for desktop*/
+@media only screen and (min-width: 1024px) {
+  nav {
+    background-color: #4056A1;
+  }
 }
