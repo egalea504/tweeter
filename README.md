@@ -16,3 +16,9 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+![Screenshot of Tweeter Desktop](https://github.com/egalea504/tweeter/blob/e30eb7af4ff835e73077a758e528bf964dadfeb9/docs/Tweeter_Desktop%20Example.png)
+
+![Screenshot of Tweeter Mobile](https://github.com/egalea504/tweeter/blob/e30eb7af4ff835e73077a758e528bf964dadfeb9/docs/Tweeter_Mobile%20Design.png)
+
+![Screenshot of Tweeter Tweet Submission](https://github.com/egalea504/tweeter/blob/e30eb7af4ff835e73077a758e528bf964dadfeb9/docs/Tweeter_Tweet%20Submission.png)
