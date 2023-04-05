@@ -59,14 +59,21 @@ $(document).ready(function() {
     } else {
       let data = $(this).serialize();
       //once post has been completed - reload page
-      $.ajax({url: "/tweets/", method: 'POST', data: data}).done(function() {
-        window.location.reload(loadTweets);
+      $.ajax({url: "/tweets/", method: 'POST', data: data})
+      .done(function() {
+        loadTweets();
+        $("#tweet-text").val(""); // empty the text area
+        $("#counter").val(140); // reset counter value to 140
+      })
+      .fail(function(error) {
+        //handling error here by displaying it on the console
+        console.log("An error occurred: " + error);
       });
     }
   });
 
   // load tweets which have been posted
-  const loadTweets = $(function() {
+  const loadTweets = function() {
     $.ajax({url: "/tweets/", method: 'GET', datatype: 'json'})
       .then(function(data) {
         console.log('Success: ', data);
@@ -74,7 +81,7 @@ $(document).ready(function() {
         $('#tweet-container').empty();
         renderTweets(data);
       });
-  });
+  };
 
   $("#arrow-down").click(function() {
     $("html").animate(
@@ -84,5 +91,7 @@ $(document).ready(function() {
       800 //speed
     );
   });
+
+  loadTweets();
 
 });

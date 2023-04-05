@@ -35,6 +35,7 @@ article:hover {
   border-width: 5px;
   border-color:#545149;
   padding:20px;
+  overflow-wrap:normal;
 }
 
 .icons {
