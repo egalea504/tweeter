@@ -186,6 +186,10 @@ Profile Section
   align-items: center;
 }
 
+#tweet-text-label {
+  font-size: 1.2rem
+}
+
 #tweet-button {
   background-color: black;
   color: white;
