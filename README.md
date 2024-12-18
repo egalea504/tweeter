@@ -17,8 +17,8 @@ This repository is the starter code for the project: Students will fork and clon
 - Express
 - Node 5.10.x or above
 
-![Screenshot of Tweeter Desktop](https://github.com/egalea504/tweeter/blob/e30eb7af4ff835e73077a758e528bf964dadfeb9/docs/Tweeter_Desktop%20Example.png)
+![Screenshot of Tweeter Desktop](https://github.com/egalea504/tweeter/blob/d603d50785f968b835affcbdf1f2e9adae3182b2/docs/Screenshot%202024-12-17%20at%2010.54.52%E2%80%AFPM%20copy.png)
 
-![Screenshot of Tweeter Mobile](https://github.com/egalea504/tweeter/blob/e30eb7af4ff835e73077a758e528bf964dadfeb9/docs/Tweeter_Mobile%20Design.png)
+![Screenshot of Tweeter Mobile](https://github.com/egalea504/tweeter/blob/d603d50785f968b835affcbdf1f2e9adae3182b2/docs/Screenshot%202024-12-17%20at%2010.55.08%E2%80%AFPM%20copy.png)
 
-![Screenshot of Tweeter Tweet Submission](https://github.com/egalea504/tweeter/blob/e30eb7af4ff835e73077a758e528bf964dadfeb9/docs/Tweeter_Tweet%20Submission.png)
+![Screenshot of Tweeter Tweet Submission](https://github.com/egalea504/tweeter/blob/d603d50785f968b835affcbdf1f2e9adae3182b2/docs/Screenshot%202024-12-17%20at%2010.55.42%E2%80%AFPM%20copy.png)
